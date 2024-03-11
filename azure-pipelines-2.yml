@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main  # Adjust the branch as needed
+
+pool:
+  vmImage: windows-latest
+
+jobs:
+- job: BuildJob  # Rename the job to better reflect its purpose
+  displayName: 'Build and Test'  # Update the display name for clarity
+  steps:
+  - script: echo "Running Build Step"
+    displayName: 'Build Step'
+
+  - script: echo "Running Test Step"
+    displayName: 'Test Step'
+
+  # Add more steps as needed for your specific project
+
+- job: DeployJob  # Add a deploy job if needed
+  displayName: 'Deploy'
+  steps:
+  - script: echo "Running Deployment Step"
+    displayName: 'Deployment Step'

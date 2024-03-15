@@ -32,7 +32,7 @@ jobs:
   - task: ShellScript@2
     displayName: 'Custom Shell Script'
     inputs:
-      scriptPath: 'C:\Users\jatin.dalla\OneDrive - Duck Creek Technologies LLC\Desktop\Sample1.sh'  # Path to your shell script
+      scriptPath: 'C:\Manual\Sample1.sh'  # Path to your shell script
       args: 'NO'  # Optional arguments to pass to the script
 
   - task: PublishBuildArtifacts@1

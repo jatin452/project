@@ -29,9 +29,15 @@ jobs:
   - script: echo "Running Deployment Step to $environment"
     displayName: 'Deployment Step'
 
+  - task: ShellScript@2
+    displayName: 'Custom Shell Script'
+    inputs:
+      scriptPath: 'C:\Users\jatin.dalla\OneDrive - Duck Creek Technologies LLC\Desktop\Sample.ps1'  # Path to your shell script
+      args: 'NO'  # Optional arguments to pass to the script
+
   - task: PublishBuildArtifacts@1
     inputs:
-      PathtoPublish: $(Build.ArtifactStagingDirectory)
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
       ArtifactName: 'drop'
       publishLocation: 'Container'
       MaxArtifactSize: 1

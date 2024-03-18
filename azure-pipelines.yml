@@ -20,18 +20,10 @@ jobs:
   - script: echo "Running Test Step"
     displayName: 'Test Step'
 
-- job: DeployJob
-  displayName: 'Deploy'
-  dependsOn: BuildJob
-  variables:
-    environment: ${{ parameters.environment }}
-  steps:
   - script: echo "Running Deployment Step to $environment"
     displayName: 'Deployment Step'
 
   - task: PowerShell@2
-    displayName: 'Execute Sample1.sh'
+    displayName: 'Execute Sample.ps1'
     inputs:
-      targetType: 'inline'
-      script: |
-        Invoke-Expression -Command "C:\Manual\Sample.ps1"
+      filePath: 'C:\Manual\Sample.ps1'

@@ -29,10 +29,9 @@ jobs:
   - script: echo "Running Deployment Step to $environment"
     displayName: 'Deployment Step'
 
-  - task: PowerShell@2  # Use PowerShell task instead of ShellScript@2 for Windows
-    displayName: 'Custom PowerShell Script'
+  - task: PowerShell@2
+    displayName: 'Execute Sample1.sh'
     inputs:
       targetType: 'inline'
       script: |
-        Get-ChildItem C:\Manual\  # List files in the C:\Manual directory
-        Get-Content C:\Manual\Sample1.sh  # Display content of Sample1.sh
+        Invoke-Expression -Command "C:\Manual\Sample1.sh"

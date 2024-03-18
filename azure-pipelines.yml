@@ -34,4 +34,4 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        Invoke-Expression -Command "C:\Manual\Sample1.sh"
+        Invoke-Expression -Command "C:\Manual\Sample.ps1"

@@ -23,7 +23,10 @@ jobs:
   - script: echo "Running Deployment Step to $environment"
     displayName: 'Deployment Step'
 
-  - task: PowerShell@2
-    displayName: 'Execute Sample.ps1'
-    inputs:
-      filePath: 'https://github.com/jatin452/SampleProject/blob/main/Sample.ps1'
+  #- task: PowerShell@2
+   # displayName: 'Execute Sample.ps1'
+   # inputs:
+   #   filePath: 'https://github.com/jatin452/SampleProject/blob/main/Sample.ps1'
+  
+  - script: echo "Running on agent machine:$(Agent.MachineName)"
+    displayName: 'Output Agent Machine Name'

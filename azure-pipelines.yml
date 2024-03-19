@@ -26,4 +26,4 @@ jobs:
   - task: PowerShell@2
     displayName: 'Execute Sample.ps1'
     inputs:
-      filePath: 'C:\Manual\Sample.ps1'
+      filePath: 'https://github.com/jatin452/SampleProject/blob/main/Sample.ps1'
